@@ -9,7 +9,6 @@ import time
 import os
 import commands
 import re
-import send_email
 import requests
 import socket
 import urllib2
