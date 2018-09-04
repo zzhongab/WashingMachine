@@ -280,9 +280,12 @@ while True:
     # Get the numeric string
     digits = re.sub("[^0-9]", "", ssocr_output)
     # check the length of recognized digits string
+    
+    print(ssocr_output[:4])
+    
     if (len(digits) == 0):
         # no pixel
-        if(ssocr_output[:11] == 'ssocr: iter' or ssocr_output == '_d' or ssocr_output == '_e' or ssocr_output == 'a_' or ssocr_output == '__' or ssocr_output == '_'):
+        if(ssocr_output[:4] == 'iter' or ssocr_output == '_d' or ssocr_output == '_e' or ssocr_output == 'a_' or ssocr_output == '__' or ssocr_output == '_'):
             OCCUPIED = True
             remaining_minutes = 0
             
